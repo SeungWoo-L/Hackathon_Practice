@@ -11,7 +11,81 @@
                         {
                             "path": "Vehicle.Speed",
                             "access": "read"
+                        },
+                        {
+                            "path": "Vehicle.Exterior.AirTemperature",
+                            "access": "read"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.AmbientAirTemperature",
+                            "access": "read"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row1.Left.Temperature",
+                            "access":"write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row1.Right.Temperature",
+                            "access":"write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row2.Left.Temperature",
+                            "access":"write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row2.Right.Temperature",
+                            "access":"write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row3.Left.Temperature",
+                            "access":"write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row3.Right.Temperature",
+                            "access":"write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row4.Left.Temperature",
+                            "access":"write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row4.Right.Temperature",
+                            "access":"write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row1.Left.FanSpeed",
+                            "access": "write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row1.Right.FanSpeed",
+                            "access": "write"
+                        },
+
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row2.Left.FanSpeed",
+                            "access": "write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row2.Right.FanSpeed",
+                            "access": "write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row3.Left.FanSpeed",
+                            "access": "write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row3.Right.FanSpeed",
+                            "access": "write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row4.Left.FanSpeed",
+                            "access": "write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.HVAC.Station.Row4.Right.FanSpeed",
+                            "access": "write"
                         }
+
                     ]
                 }
             }
@@ -20,11 +94,85 @@
             "type": "pubsub",
             "config": {
                 "reads": [
-                    "sampleapp/getSpeed"
+                    "sampleapp/getSpeed",
+                    "sampleapp/getAmAirTemp",
+                    "sampleapp/getExAirTemp",
+                    "sampleapp/getHVACR1LTemp",
+                    "sampleapp/getHVACR1RTemp",
+                    "sampleapp/getHVACR2LTemp",
+                    "sampleapp/getHVACR2RTemp",
+                    "sampleapp/getHVACR3LTemp",
+                    "sampleapp/getHVACR3RTemp",
+                    "sampleapp/getHVACR4LTemp",
+                    "sampleapp/getHVACR4RTemp",
+                    "sampleapp/getHVACR1LFan",
+                    "sampleapp/getHVACR1RFan",
+                    "sampleapp/getHVACR2LFan",
+                    "sampleapp/getHVACR2RFan",
+                    "sampleapp/getHVACR3LFan",
+                    "sampleapp/getHVACR3RFan",
+                    "sampleapp/getHVACR4LFan",
+                    "sampleapp/getHVACR4RFan"
+                    
                 ],
                 "writes": [
                     "sampleapp/getSpeed/response",
-                    "sampleapp/currentSpeed"
+                    "sampleapp/currentSpeed",
+
+                    "sampleapp/getAmAirTemp/response",
+                    "sampleapp/currentAmAirTemp",
+
+                    "sampleapp/getExAirTemp/response",
+                    "sampleapp/currentExAirTemp",
+
+                    "sampleapp/setHVACR1LTemp/response",
+                    "sampleapp/setHVACR1LTemp",
+
+                    "sampleapp/setHVACR1RTemp/response",
+                    "sampleapp/setHVACR1RTemp",
+                    
+                    "sampleapp/setHVACR2LTemp/response",
+                    "sampleapp/setHVACR2LTemp",
+
+                    "sampleapp/setHVACR2RTemp/response",
+                    "sampleapp/setHVACR2RTemp",
+
+                    "sampleapp/setHVACR3LTemp/response",
+                    "sampleapp/setHVACR3LTemp",
+
+                    "sampleapp/setHVACR3RTemp/response",
+                    "sampleapp/setHVACR3RTemp",
+
+                    "sampleapp/setHVACR4LTemp/response",
+                    "sampleapp/setHVACR4LTemp",
+
+                    "sampleapp/setHVACR4RTemp/response",
+                    "sampleapp/setHVACR4RTemp",
+
+                    "sampleapp/setHVACR1LFan/response",
+                    "sampleapp/setHVACR1LFan",
+
+                    "sampleapp/setHVACR1RFan/response",
+                    "sampleapp/setHVACR1RFan",
+
+                    "sampleapp/setHVACR2LFan/response",
+                    "sampleapp/setHVACR2LFan",
+
+                    "sampleapp/setHVACR2RFan/response",
+                    "sampleapp/setHVACR2RFan",
+
+                    "sampleapp/setHVACR3LFan/response",
+                    "sampleapp/setHVACR3LFan",
+
+                    "sampleapp/setHVACR3RFan/response",
+                    "sampleapp/setHVACR3RFan",
+
+                    "sampleapp/setHVACR4LFan/response",
+                    "sampleapp/setHVACR4LFan",
+
+                    "sampleapp/setHVACR4RFan/response",
+                    "sampleapp/setHVACR4RFan"
+
                 ]
             }
         }
