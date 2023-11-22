@@ -221,7 +221,6 @@ class SampleApp(VehicleApp):
                 await self.set_fan_speed_all_seat(10)
 
     async def set_fan_speed_all_seat(self, fan_speed: int):
-
         await self.Vehicle.Cabin.HVAC.Station.Row1.Left.FanSpeed.set(fan_speed)
         await self.Vehicle.Cabin.HVAC.Station.Row1.Right.FanSpeed.set(fan_speed)
         await self.Vehicle.Cabin.HVAC.Station.Row2.Left.FanSpeed.set(fan_speed)
